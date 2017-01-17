@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+   body {
+	background-image: url('source/pics/bg.jpg');
+	color: white; 
+}
+</style>
+</head>
+<body>
+
+<h3 align="center" style="color: white;"><strong>Pending Requests </strong></h3>
+
+<table class="table table-hover" style="width: 75%;">
+<tr>
+<th>friend which send request</th>
+<th colspan="2" style="text-align: center;">Status</th>
+</tr>
+
+<tr ng-repeat="p in pendingRequest">
+<td>{{p.fromId}}</td>
+<td style="text-align: center;"><a href="" ng-click="updatePendingRequest(p.fromId,'A')" class="btn btn-success">Accept</a></td>
+
+<td style="text-align: center;"><a href="" ng-click="updatePendingRequest(p.fromId,'D')" class="btn btn-danger">Deny</a></td>
+</tr>
+
+</table>
+
+</body>
+
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script type="text/javascript"
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="_friend/friendservice.js"></script>
+<script type="text/javascript" src="_friend/friendcontroller.js"></script>
+
+</html>

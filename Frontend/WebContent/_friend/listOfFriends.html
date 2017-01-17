@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+   body {
+	background-image: url('source/pics/bg.jpg');
+	color: white; 
+}
+</style>
+</head>
+<body>
+
+<h3 align="center" style="color: white;"><strong>List of friends </strong></h3>
+
+<table class="table table-hover" style="width: 75%;" >
+<tr>
+<th>From-Id</th>
+<th>To-Id</th>
+<th>Status</th>
+</tr>
+<tr ng-repeat="f in friends">
+<!-- <td><img alt="" src="source/pics/1.jpg" style="width: 50px; height: 25%"></td> -->
+<td>{{f.fromId}}</td>
+<td>{{f.toId}}</td>
+<td><a href="#/chat" ng-click="" class="btn btn-success" class="menu-icon fa fa-message">chat</a></td>
+</tr>
+</table>
+</body>
+
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script type="text/javascript"
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="_friend/friendservice.js"></script>
+<script type="text/javascript" src="_friend/friendcontroller.js"></script>
+	
+</html>
